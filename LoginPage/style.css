@@ -88,3 +88,13 @@ label a{
     color: #fff;
     text-decoration: none;
 }
+.link{
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.link:hover{
+    text-decoration: underline;
+}
