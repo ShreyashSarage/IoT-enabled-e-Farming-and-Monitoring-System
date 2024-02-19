@@ -12,7 +12,7 @@
 
 #define DHTTYPE DHT22
 
-#define LED 2
+//#define LED 2
 
 DHT dht(DHTPIN,DHTTYPE);
 
@@ -24,7 +24,7 @@ const char* ssid =   "acts";                          //ssid - service set Ident
 
 const char* password =  "";                     // replace with ssid paasword
 
-const char* mqttBroker = "192.168.77.164";                  // broker address - replace it with your broker address/cloud broker - test.mosquitto.org
+const char* mqttBroker = "192.168.77.98";                  // broker address - replace it with your broker address/cloud broker - test.mosquitto.org
 
 const int   mqttPort = 1883;                            // broker port number
 
@@ -141,6 +141,12 @@ void loop() {
     sensor_data_payload["temperature"] = temp;
     sensor_data_payload["humidity"]   = humidity;
     sensor_data_payload["moisture"] = moisture;
+    if(moisture < 25.00){
+      digitalWrite(ledPin,HIGH);
+    }
+    else{
+      digitalWrite(ledPin,LOW);
+    }
     if (isnan(humidity) || isnan(temp)) {
     Serial.println(F("Failed to read from DHT sensor!"));
     return;
@@ -150,13 +156,13 @@ void loop() {
     
     serializeJson(sensor_data_payload, sensor_data_format_for_mqtt_publish);
     
-    delay(2000);
+    delay(1000);
     Serial.println(temp);
     Serial.println(humidity);   
     Serial.println(moisture);
     client.publish(mqtt_topic_for_publish,sensor_data_format_for_mqtt_publish);  //(topicname, payload)
     Serial.println("sensor data sent to broker");
-    delay(5000);
+    delay(1000);
   }
 }
 
