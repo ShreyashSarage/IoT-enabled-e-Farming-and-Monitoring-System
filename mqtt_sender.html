@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MQTT LED Control</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script>
+</head>
+<body>
+  <h1>Control LED</h1>
+  <button id="onButton">Turn On</button>
+  <button id="offButton">Turn Off</button>
+
+  <script>
+    // Replace with your MQTT broker details
+    const broker = "localhost";
+    const topic = "esp32/output";
+
+    const client = new Paho.MQTT.Client(broker, 1883, "web-page-sender");
+
+    client.connect({ onSuccess: onConnect, onFailure: onFailure });
+
+    function onConnect() {
+      console.log("Connected to MQTT broker");
+    }
+
+    function onFailure(error) {
+      console.error("Connection failed:", error);
+    }
+
+    const onButton = document.getElementById("onButton");
+    const offButton = document.getElementById("offButton");
+
+    onButton.addEventListener("click", () => {
+      publishMessage("on");
+    });
+
+    offButton.addEventListener("click", () => {
+      publishMessage("off");
+    });
+
+    function publishMessage(value) {
+      const message = new Paho.MQTT.Message(value);
+      message.destinationName = topic;
+      client.send(message);
+      console.log("Message sent:", value);
+    }
+  </script>
+</body>
+</html>
