@@ -1,0 +1,78 @@
+
+:root {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;  
+  background-image: url('https://img.freepik.com/free-vector/hand-drawn-world-vegetarian-day-background_23-2149057646.jpg?w=826&t=st=1708321714~exp=1708322314~hmac=26d0d35fba43b98a8ccdc613069e9592fdd5c46c8f2753429d47b020ac64fcbd');
+ 
+}
+
+.flexible {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.sec-content-div {
+  font-size: 2rem;
+  text-align: start;
+  padding: 0 2rem 5rem 2rem;
+  width: auto;
+  justify-content: space-around;
+  max-width: 95rem;
+  margin: 0 auto;
+}
+
+#varieties {
+  background-color: #e3e3e3;
+}
+.tile {
+  background-color: #fafafa;
+  height: 40rem;
+  width: 25rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+@media (max-width: 680px) {
+  .tile {
+    width: auto;
+    max-width: 100%;
+    min-width: 20rem;
+    margin: 1.5rem auto;
+    height: auto;
+  }
+}
+.tile img {
+  width: 100%;
+  max-width: 48rem;
+  border-radius: 0.5rem;
+}
+.tile h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  color: #e23d3d;
+  margin: 0;
+}
+.tile p {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+}
+

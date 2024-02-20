@@ -1,0 +1,83 @@
+
+body { 
+	font-family: Arial, sans-serif; 
+	background-color: #d6b1b1; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
+    background-image: url('../../kharif/bajra.webp');
+	display: flex; 
+	justify-content: left; 
+	align-items: left; 
+	height: 100vh; 
+    
+} 
+.info {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+p {
+    font-family: Tahoma, Verdana, sans-serif;
+    }
+
+.Tips {
+    position: absolute;
+    justify-content: center;
+    align-items: baseline;
+    width: 30%;
+    min-height: 36vh;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 10%;
+    font-family: verdana;
+    margin-top: 24%;
+  }
+
+  .consumption {
+    position: absolute;
+    justify-content: center;
+    align-items: baseline;
+    width: 30%;
+    min-height: 45vh;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 24%;
+    font-family: verdana;
+    font: bolder;
+  }
+
+  .bg-text {
+    text-align: center;
+    font-size: larger;
+    margin-left: 28%;
+ 
+}
+
+.bajra {
+  position:fixed;
+  justify-content: center;
+  align-items: baseline;
+  width: 98%;
+  min-height: 20vh;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-left: -66.5%;
+  margin-right: 30%;
+  font-family: verdana;
+  margin-top: 12%;
+}

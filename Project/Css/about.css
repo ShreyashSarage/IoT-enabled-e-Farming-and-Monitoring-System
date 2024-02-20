@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Oswald');
+
+* {
+  box-sizing: border-box;
+}
+
+body 
+{
+  background: #0a1022;
+  padding: 0;
+  margin: 0;
+  color: #fbfbfb;
+}
+.main-container {
+  width: 100vw;
+  height: 400vh;
+  display: flex;
+  overflow: hidden;
+  font-weight: bolder;
+  .left-sidebar {
+    flex-grow: 6;
+    max-width: 420px;
+    /* border-right: 1px solid $border-color; */
+    /* position: b; */
+    box-shadow: 2px 0px 5px #03050a;
+    /* background: #0e121f; */
+    
+    .inner {
+      /* display: flex; */
+      /* flex-direction: column; */
+      height: 100%;
+      
+      .user-profile {
+        flex-grow: 4;
+        /* max-height: 345px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* transition: all $animation-duration; */
+        /* border: $border-color; */
+        position: relative;
+        
+        .user-background {
+          position: absolute;
+          background: url('../Images/website/benjamin-davies-Zm2n2O7Fph4-unsplash.jpg');
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+          filter: blur(2px);
+          z-index: -1;
+          
+          &::after {
+            display: block;
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(69, 72, 81, 0.3) 0, #0a1022 95%);
+            height: 100%;
+            width: 100%;
+            content: '';
+          }
+        }
+        
+        .user-image {
+          margin: 50px 0 25px 0;
+          /* border-color: $border-color; */
+          /* transition: all $animation-duration; */
+          img {
+            width: 90px;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.1);
+            /* transition: all $animation-duration; */
+          }
+        }
+        
+        .user-info {
+          text-align: center;
+          
+          .user-name {
+            font-family: 'Oswald';
+            font-weight: 400;
+            text-transform: uppercase;
+          }
+          
+          .user-location {
+            color: #D1D3DA;
+            i::before {
+              transform: rotate(180deg);
+              color: #556798;
+            }
+          }
+        }
+      }
+      
+      .main-menu {
+        flex-grow: 7;
+      }
+      
+      .social-links {
+        flex-grow: 5;
+        max-height: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        a {
+          padding: 0 10px;
+          color: #fff;
+          font-size: 1.3rem;
+        }
+      }
+    }
+    
+    &.minimize {
+       max-width: 100px;
+      
+      .inner {
+        .user-profile {
+          border-bottom: 1px solid #1a233d;
+          max-height: 130px;
+          
+          .user-image {
+            margin: 25px 0;
+            img {
+              width: 100px;
+            }
+          }
+        .user-info {
+          height: 0px;
+          transition-delay: 0s;
+          /* animation: animate-sidebar-text $animation-duration; */
+        }
+       }
+        
+        .social-links {
+          max-height: 200px;
+          flex-direction: column;
+          a {
+            padding: 10px 0;
+          }
+        }
+      }
+      
+      .toggle-button i::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  .main-content {
+    flex-grow: 10;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bolder;
+
+      /*> div {
+        margin-bottom: 20px;
+      }*/
+    }
+    
+    .modal {
+      /* border: 1px solid $border-color; */
+      padding: 0 20px;
+      width: 50%;
+      border-radius: 25px;
+      display: none;
+      
+      &.show {
+        display: inherit;
+      }
+      
+      .heading {
+        h2 {
+          font-size: 1.6rem;
+          padding: 10px 0;
+          letter-spacing: 1.2rem;
+          font-weight: bolder;
+        }
+        h3 {
+          letter-spacing: -0.03rem;
+          font-family: 'Oswald';
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+    
+  .right-sidebar {
+    flex-grow: 1;
+    max-width: 100px;
+    /* border-left: 1px solid $border-color; */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.fa {
+  padding: 3%;
+  font-size: 90px;
+  width: 23px;
+  height: 25px;
+  text-align: right;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-github {
+  background: #3B5998;
+  color: white;
+}
+
+.user-title {
+  text-align: left;
+  
+
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}

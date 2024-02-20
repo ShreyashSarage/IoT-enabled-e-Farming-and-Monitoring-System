@@ -1,0 +1,101 @@
+
+body { 
+	font-family: Arial, sans-serif; 
+	background-color: #d6b1b1; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
+    background-image: url('../../Images/rabi/mustard.jpg');
+	display: flex; 
+	justify-content: left; 
+	align-items: left; 
+	height: 100vh; 
+    
+} 
+.info {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+p {
+    font-family: Tahoma, Verdana, sans-serif;
+    }
+
+.Tips {
+    position: absolute;
+    justify-content: center;
+    align-items: baseline;
+    width: 20%;
+    min-height: 28vh;
+    background: rgba(236, 214, 214, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(214, 45, 45, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 10%;
+    margin-right: 30%;
+    font-family: verdana;
+    margin-top: 25%;
+  }
+
+  .consumption {
+    position: absolute;
+    justify-content: center;
+    align-items: baseline;
+    width: 20%;
+    min-height: 28vh;
+    background: rgba(236, 214, 214, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(214, 45, 45, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 40%;
+    margin-right: 30%;
+    margin-top: 25%;
+    font-family: verdana;
+    font: bolder;
+  }
+
+  .Production {
+    position: absolute;
+    justify-content: center;
+    align-items: baseline;
+    width: 20%;
+    min-height: 28vh;
+    background: rgba(236, 214, 214, 0.479);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(214, 45, 45, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 70%;
+    margin-right: 30%;
+    margin-top: 25%;
+    font-family: verdana;
+  }
+
+  .bg-text {
+    text-align: center;
+    font-size:100%;
+}
+
+
+.boxy {
+    position: absolute;
+    justify-content: center;
+    align-items: baseline;
+    width: 99%;
+    min-height: 10vh;
+    background: rgba(235, 209, 209, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(214, 45, 45, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: -11%;
+    margin-top: -2%;
+    font-family: verdana;
+    font: bolder;
+  }
